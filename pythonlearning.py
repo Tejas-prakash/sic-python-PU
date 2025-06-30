@@ -1,3 +1,3 @@
-y=int(input('enter number:'))
-if y % 2== 0:
-    print('even')
+y=int(input('enter the number:'))
+if y%2==0:
+    print("even") 
