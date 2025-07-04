@@ -1,10 +1,20 @@
 import pymysql
+
 def connectiondb():
-    connection= None
+    connection = None
     try:
-        connection=pymysql.connect(host='localhost',user='root',password='Zoey@301105',database='tejas_db',charset='upf8')
+        connection = pymysql.connect(
+            host='localhost',
+            user='root',
+            password='Zoey@301105',
+            database='db1',
+            charset='utf8'   
+        )
         print('Database connected')
-    except:
+    except pymysql.MySQLError as e:
         print("Database not connected")
+        print(f"Error: {e}")
     return connection
+
 connectiondb()
+    
